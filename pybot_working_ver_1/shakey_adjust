@@ -1,0 +1,16 @@
+
+
+def shake ():
+
+	s_list = []
+	with open('shakey.txt', "r") as shakey:
+		for line in shakey:
+			line2 = line.split("             ")
+			line3 = " | ".join(line2)
+			s_list.append(line3)
+
+	with open('shakey_new.txt', "w+") as new_s:
+		for s in s_list:
+			new_s.write(s)			
+
+shake()			
